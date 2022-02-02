@@ -140,6 +140,9 @@ class RSSMCell(nn.Module):
         za = F.elu(x)
         h = self.gru(za, in_h)                                             # (B, D)
 
+
+        # print(embed.shape)
+
         x = self.post_mlp_h(h) + self.post_mlp_e(embed)
         x = self.post_norm(x)
         post_in = F.elu(x)

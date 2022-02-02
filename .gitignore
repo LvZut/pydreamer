@@ -4,6 +4,7 @@ data/*
 log/
 mlruns/
 
+
 _*.*
 .*
 
@@ -11,3 +12,10 @@ _*.*
 !.gitignore
 !.dockerignore
 !data/minerl_*.npy
+
+
+
+
+
+results/atari/figures/
+build/

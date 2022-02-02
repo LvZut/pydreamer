@@ -53,7 +53,12 @@ class ActionRewardResetWrapper(gym.Wrapper):
             action_vec = action
         obs['action'] = action_vec
         obs['reward'] = np.array(reward)
-        obs['terminal'] = np.array(False if self.no_terminal or info.get('time_limit') else done)
+
+        # not sure if time limit is needed as 'done' does the exact same
+        # obs['terminal'] = np.array(False if self.no_terminal or info.get('time_limit') else done)
+        obs['terminal'] = np.array(False if self.no_terminal else done)
+
+
         obs['reset'] = np.array(False)
         return obs, reward, done, info
 

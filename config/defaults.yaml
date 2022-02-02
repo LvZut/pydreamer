@@ -12,13 +12,15 @@ defaults:
   logbatch_interval: 1000
   save_interval: 500
   eval_interval: 2000
-  data_workers: 4
+  
+  # default 4 workers
+  data_workers: 1
   enable_profiler: False
   verbose: False
 
   # Features
   image_key: image
-  image_size: 64
+  image_size: 256
   image_channels: 3
   image_categorical: False
   map_key:
@@ -38,13 +40,19 @@ defaults:
   vecobs_weight: 1.0
   reward_weight: 1.0
   terminal_weight: 1.0
-  adam_lr: 3.0e-4
+
+  # decrease learning rate
+  # adam_lr: 3.0e-4
+  adam_lr: 3.0e-5
+
   adam_lr_actor: 1.0e-4
   adam_lr_critic: 1.0e-4
   adam_eps: 1.0e-5
   keep_state: True
-  batch_length: 50
-  batch_size: 50
+  
+  # down from 50
+  batch_length: 8
+  batch_size: 8
   device: "cuda:0"
   grad_clip: 200
   grad_clip_ac: 200
@@ -53,10 +61,10 @@ defaults:
 
   # Eval
   test_batches: 61  # For unbiased test needs to be enough to cover full episodes
-  test_batch_size: 10  # Smaller for faster test
+  test_batch_size: 4  # Smaller for faster test
   eval_batches: 61  # Big enough to reach episode end (xN). +1 to log last episode
   eval_samples: 10  # Big enough for good sampling
-  eval_batch_size: 10  # Limited by GPU mem
+  eval_batch_size: 4  # Limited by GPU mem (default is 10)
 
   # Model
   model: dreamer
@@ -95,7 +103,7 @@ defaults:
   # Generator
   generator_workers: 4
   generator_workers_eval: 1
-  generator_prefill_steps: 200_000
+  generator_prefill_steps: 20_000
   generator_prefill_policy: random
   limit_step_ratio: 0
   env_id:
@@ -104,8 +112,95 @@ defaults:
   env_time_limit: 0
   env_no_terminal: False
 
+carla:
+  env_id: CARLA-GYM
+  data_workers: 1
+  generator_workers: 1
+  generator_prefill_steps: 100_000
+  # resume_id: 8d12fcd458404f0c89cd3be685694339
+
+  # 2 possible actions, 12 channels in BEV
+  action_dim: 2
+  image_channels: 12
+
+  # currently limited by GPU memory
+  batch_length: 2
+  batch_size: 2
+
+  clip_rewards: tanh
+
+  # Eval
+  test_batches: 61  # For unbiased test needs to be enough to cover full episodes
+  test_batch_size: 1  # Smaller for faster test
+  eval_batches: 61  # Big enough to reach episode end (xN). +1 to log last episode
+  eval_samples: 10  # Big enough for good sampling
+  eval_batch_size: 1  # Limited by GPU mem (default is 10)
+
+  # Training
+  buffer_size: 10_000_000
+  reset_interval: 200
+  iwae_samples: 1
+  kl_balance: 0.8
+  kl_weight: 0.1
+  image_weight: 1.0
+  vecobs_weight: 1.0
+  reward_weight: 1.0
+  terminal_weight: 1.0
+
+
+  # Model
+  model: dreamer
+  deter_dim: 2048
+  stoch_dim: 32
+  stoch_discrete: 32
+  hidden_dim: 1000
+  gru_layers: 1
+  gru_type: gru
+  layer_norm: True
+  vecobs_size: 0
+  image_encoder: cnn
+  cnn_depth: 48
+  image_encoder_layers: 0
+  image_decoder: cnn
+  image_decoder_layers: 0
+  reward_input: False
+  reward_decoder_layers: 4
+  reward_decoder_categorical:
+  terminal_decoder_layers: 4
+  map_stoch_dim: 64
+  probe_model: none
+  map_decoder: dense
+  map_hidden_layers: 4
+  map_hidden_dim: 1024
+
+  # Actor Critic
+  gamma: 0.99
+  lambda_gae: 0.95
+  entropy: 0.001
+  target_interval: 100
+  imag_horizon: 15
+  actor_grad: reinforce
+
+
+atari:
+  n_steps: 99_000_000
+  n_env_steps: 200_000_000
+  # Env
+  env_id: Atari-Pong
+  action_dim: 18
+  env_action_repeat: 4
+  env_time_limit: 27_000  # =108_000/action_repeat = 30 minutes of game play.
+  generator_workers: 1
+  generator_prefill_steps: 2_000
+  clip_rewards: tanh
+  # Model
+  deter_dim: 1024
+  kl_weight: 0.1
+  gamma: 0.99
+  entropy: 0.001
+
 minigrid:
-  env_id: MiniGrid-MazeS11N-v0
+  env_id: MiniGrid-LavaCrossingS11N5-v0
   # Features
   image_key: image
   image_size: 7
@@ -122,11 +217,12 @@ minigrid:
   image_encoder_layers: 3
   image_decoder: dense
   image_decoder_layers: 2
-  probe_model: map
+  probe_model: none
   imag_horizon: 1
 
 miniworld:
-  env_id: MiniWorld-MazeS7GridA4C-v0
+  # env_id: MiniWorld-MazeS7GridA4C-v1
+  env_id: MiniWorld-Maze-v0
   data_workers: 6
   # Features
   image_key: image
@@ -143,23 +239,6 @@ miniworld:
   probe_model: map
   cnn_depth: 32
   imag_horizon: 1
-
-atari:
-  n_steps: 99_000_000
-  n_env_steps: 200_000_000
-  # Env
-  env_id: Atari-Pong
-  action_dim: 18
-  env_action_repeat: 4
-  env_time_limit: 27_000  # =108_000/action_repeat = 30 minutes of game play.
-  generator_workers: 1
-  generator_prefill_steps: 50_000
-  clip_rewards: tanh
-  # Model
-  deter_dim: 1024
-  kl_weight: 0.1
-  gamma: 0.99
-  entropy: 0.001
 
 dmc:
   env_id: DMC-quadruped_run

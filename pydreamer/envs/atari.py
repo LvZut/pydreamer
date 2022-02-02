@@ -13,7 +13,11 @@ class Atari(gym.Env):
     def __init__(self,
                  name,
                  action_repeat=4,
-                 size=(64, 64),
+                #  size=(64, 64),
+                # size=(65, 65),
+                #  size=(160, 160),
+                # size=(128, 128),
+                 size=(256,256),
                  grayscale=False,  # DreamerV2 uses grayscale=True
                  noops=30,
                  life_done=False,

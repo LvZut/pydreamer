@@ -35,6 +35,9 @@ from pydreamer.tools import *
 torch.distributions.Distribution.set_default_validate_args(False)
 torch.backends.cudnn.benchmark = True  # type: ignore
 
+# for GPU debugging:
+# CUDA_LAUNCH_BLOCKING=1
+
 
 def run(conf):
     mlflow_start_or_resume(conf.run_name or conf.resume_id, conf.resume_id)
@@ -199,7 +202,7 @@ def run(conf):
     data_iter = iter(DataLoader(WorkerInfoPreprocess(preprocess(data)),
                                 batch_size=None,
                                 num_workers=conf.data_workers,
-                                prefetch_factor=20 if conf.data_workers else 2,  # GCS download has to be shorter than this many batches (e.g. 1sec < 20*300ms)
+                                prefetch_factor=10 if conf.data_workers else 2,  # GCS download has to be shorter than this many batches (e.g. 1sec < 20*300ms)
                                 pin_memory=True))
 
     scaler = GradScaler(enabled=conf.amp)
@@ -508,6 +511,7 @@ def prepare_batch_npz(data: Dict[str, Tensor], take_b=999):
                 f'Unexpected 2D tensor: {key}: {x.shape}, {x.dtype}'
 
         elif len(x.shape) == 5:  # 3D tensor - image
+            print(x.shape, [type(vec) for vec in x])
             assert x.dtype == np.float32 and (key.startswith('image') or key.startswith('map')), \
                 f'Unexpected 3D tensor: {key}: {x.shape}, {x.dtype}'
 
@@ -515,17 +519,19 @@ def prepare_batch_npz(data: Dict[str, Tensor], take_b=999):
                 x = x.transpose(0, 1, 3, 4, 2)  # => (T,B,W,W,C)
             assert x.shape[-2] == x.shape[-3], 'Assuming rectangular images, otherwise need to improve logic'
 
-            if x.shape[-1] in [1, 3]:
-                # RGB or grayscale
-                x = ((x + 0.5) * 255.0).clip(0, 255).astype('uint8')
-            elif np.allclose(x.sum(axis=-1), 1.0) and np.allclose(x.max(axis=-1), 1.0):
-                # One-hot
-                x = x.argmax(axis=-1)
-            else:
-                # Categorical logits
-                assert key in ['map_rec', 'image_rec', 'image_pred'], \
-                    f'Unexpected 3D categorical logits: {key}: {x.shape}'
-                x = scipy.special.softmax(x, axis=-1)
+            # print(x.sum(axis=-1), x.max(axis=-1))
+            x = x.argmax(axis=-1)
+            # if x.shape[-1] in [1, 3]:
+            #     # RGB or grayscale
+            #     x = ((x + 0.5) * 255.0).clip(0, 255).astype('uint8')
+            # elif np.allclose(x.sum(axis=-1), 1.0) and np.allclose(x.max(axis=-1), 1.0):
+            #     # One-hot
+            #     x = x.argmax(axis=-1)
+            # else:
+            #     # Categorical logits
+            #     assert key in ['map_rec', 'image_rec', 'image_pred'], \
+            #         f'Unexpected 3D categorical logits: {key}: {x.shape}'
+            #     x = scipy.special.softmax(x, axis=-1)
 
         x = x.swapaxes(0, 1)  # type: ignore  # (T,B,*) => (B,T,*)
         return x

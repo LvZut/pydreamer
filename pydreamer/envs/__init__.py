@@ -43,6 +43,22 @@ def create_env(env_id: str, no_terminal: bool, env_time_limit: int, env_action_r
         from .dmc import DMC
         env = DMC(env_id.split('-')[1].lower(), action_repeat=env_action_repeat)
 
+    elif env_id.startswith('CARLA'):
+        # import carla gym env
+        import carla_gym
+
+        # sensors
+        bev = carla_gym.sensors.BirdeyeSensor(params={"show_window": True})
+        params = {"sensors": [bev]}
+
+        # other params
+        
+
+        env = gym.make('carla-v0', params=params)
+        
+        
+    
+
     else:
         env = gym.make(env_id)
         env = DictWrapper(env)

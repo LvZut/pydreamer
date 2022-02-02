@@ -113,7 +113,9 @@ class ConvDecoder(nn.Module):
         super().__init__()
         self.in_dim = in_dim
         kernels = (5, 5, 6, 6)
+
         stride = 2
+        # stride = 3
         d = cnn_depth
         if mlp_layers == 0:
             layers = [
@@ -133,18 +135,39 @@ class ConvDecoder(nn.Module):
                     norm(hidden_dim, eps=1e-3),
                     activation()]
 
+        # self.model = nn.Sequential(
+        #     # FC
+        #     *layers,
+        #     nn.Unflatten(-1, (d * 32, 1, 1)),  # type: ignore
+        #     # Deconv
+        #     nn.ConvTranspose2d(d * 32, d * 4, kernels[0], stride),
+        #     activation(),
+        #     nn.ConvTranspose2d(d * 4, d * 2, kernels[1], stride),
+        #     activation(),
+        #     nn.ConvTranspose2d(d * 2, d, kernels[2], stride),
+        #     activation(),
+        #     nn.ConvTranspose2d(d, out_channels, kernels[3], stride))
+
+        # added 2 additional layers to go from output size 64x64 to 256x256
         self.model = nn.Sequential(
             # FC
             *layers,
             nn.Unflatten(-1, (d * 32, 1, 1)),  # type: ignore
             # Deconv
-            nn.ConvTranspose2d(d * 32, d * 4, kernels[0], stride),
+            nn.ConvTranspose2d(d * 32, d * 16, kernels[0], stride),
+            activation(),
+            nn.ConvTranspose2d(d * 16, d * 8, kernels[1], stride),
+            activation(),
+            nn.ConvTranspose2d(d * 8, d * 4, kernels[1], stride),
             activation(),
             nn.ConvTranspose2d(d * 4, d * 2, kernels[1], stride),
             activation(),
             nn.ConvTranspose2d(d * 2, d, kernels[2], stride),
             activation(),
             nn.ConvTranspose2d(d, out_channels, kernels[3], stride))
+            
+        
+        # print(self.model)
 
     def forward(self, x: Tensor) -> Tensor:
         x, bd = flatten_batch(x)
@@ -164,6 +187,7 @@ class ConvDecoder(nn.Module):
         target = insert_dim(target, 2, I)  # Expand target with iwae_samples dim, because features have it
 
         decoded = self.forward(features)
+        # print(decoded.shape, target.shape)
         loss_tbi = self.loss(decoded, target)
         loss_tb = -logavgexp(-loss_tbi, dim=2)  # TBI => TB
         decoded = decoded.mean(dim=2)  # TBICHW => TBCHW

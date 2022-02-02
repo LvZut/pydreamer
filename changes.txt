@@ -1,0 +1,20 @@
+changed obs to dict {'image' : obs}
+changed episode length
+
+added config parameters
+image channels depends on bev channels
+number of workers corresponds to the number of carla instances
+
+
+data.py error if prefill is too small
+
+onehot encodings do not sum up to one, currently set manually in train.py (523)
+
+
+
+WARNING: NAV: Failed to set request to go to  206.772 -207.745 0.22414 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  106.496 -282.289 0.22414 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  302.011 -176.369 0.424139 
+WARNING: NAV: failed to set max speed 
