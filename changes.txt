@@ -1,14 +1,40 @@
 changed obs to dict {'image' : obs}
 changed episode length
 
-added config parameters
+added config parameters to info in obs
 image channels depends on bev channels
 number of workers corresponds to the number of carla instances
 
 
 data.py error if prefill is too small
 
+
+
+
+
+
+
+
 onehot encodings do not sum up to one, currently set manually in train.py (523)
+fixed partially: obs dtype from uint8 to float, otherwise image gets scaled weirdly in preprocessing.py
+problem is that background should also be a category
+fixed by changing obs from carla env:
+- only one category for each pixel
+- additional layer (13 total after adding) for background (previous pixel was categoryless)
+
+
+running with batch size/len == 1
+
+Traceback (most recent call last):
+  File "train.py", line 618, in <module>
+    run(conf)
+  File "train.py", line 230, in run
+    model.training_step(obs,
+  File "/saivvy/pydreamer/pydreamer/models/dreamer.py", line 146, in training_step
+    features_dream, actions_dream, rewards_dream, terminals_dream = self.dream(in_state_dream, T - 1)  # H = T-1
+  File "/saivvy/pydreamer/pydreamer/models/dreamer.py", line 182, in dream
+    actions = torch.stack(actions)  # (H,TBI,A)
+RuntimeError: stack expects a non-empty TensorList
 
 
 
@@ -18,3 +44,38 @@ WARNING: NAV: Failed to set request to go to  106.496 -282.289 0.22414
 WARNING: NAV: failed to set max speed 
 WARNING: NAV: Failed to set request to go to  302.011 -176.369 0.424139 
 WARNING: NAV: failed to set max speed 
+
+
+
+
+
+
+
+
+
+
+
+
+carla
+(2, 2, 12, 256, 256) [<class 'numpy.ndarray'>, <class 'numpy.ndarray'>]
+(2, 2, 12, 256, 256) [<class 'numpy.ndarray'>, <class 'numpy.ndarray'>]
+
+
+atari
+(8, 8, 3, 256, 256) [<class 'numpy.ndarray'>, <class 'numpy.ndarray'>, <class 'numpy.ndarray'>, <class 'numpy.ndarray'>, <class 'numpy.ndarray'>, <class 'numpy.ndarray'>, <class 'numpy.ndarray'>, <class 'numpy.ndarray'>]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

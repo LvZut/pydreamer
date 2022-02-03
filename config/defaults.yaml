@@ -14,7 +14,7 @@ defaults:
   eval_interval: 2000
   
   # default 4 workers
-  data_workers: 1
+  data_workers: 4
   enable_profiler: False
   verbose: False
 
@@ -114,14 +114,21 @@ defaults:
 
 carla:
   env_id: CARLA-GYM
-  data_workers: 1
+  data_workers: 1 # also number of carla sessions (up to ~5gb GPU memory per worker)
   generator_workers: 1
-  generator_prefill_steps: 100_000
-  # resume_id: 8d12fcd458404f0c89cd3be685694339
+  generator_prefill_steps: 5_000
+  # resume_id:
 
   # 2 possible actions, 12 channels in BEV
   action_dim: 2
-  image_channels: 12
+  image_channels: 13
+  # image_categorical: True
+
+  # # map
+  # map_key: map
+  # map_size: 12
+  # map_channels: 12
+  # map_categorical: True
 
   # currently limited by GPU memory
   batch_length: 2
@@ -130,9 +137,10 @@ carla:
   clip_rewards: tanh
 
   # Eval
-  test_batches: 61  # For unbiased test needs to be enough to cover full episodes
+  # test_batches: 61  # For unbiased test needs to be enough to cover full episodes
+  test_batches: 1000 # (default 61 for atari) full episode
   test_batch_size: 1  # Smaller for faster test
-  eval_batches: 61  # Big enough to reach episode end (xN). +1 to log last episode
+  eval_batches: 1000  # Big enough to reach episode end (xN). +1 to log last episode
   eval_samples: 10  # Big enough for good sampling
   eval_batch_size: 1  # Limited by GPU mem (default is 10)
 
@@ -141,7 +149,7 @@ carla:
   reset_interval: 200
   iwae_samples: 1
   kl_balance: 0.8
-  kl_weight: 0.1
+  kl_weight: 1.0 # (0.1 for atari games) paper mentions Beta = 1.0 for continuous control
   image_weight: 1.0
   vecobs_weight: 1.0
   reward_weight: 1.0
@@ -150,16 +158,16 @@ carla:
 
   # Model
   model: dreamer
-  deter_dim: 2048
-  stoch_dim: 32
-  stoch_discrete: 32
-  hidden_dim: 1000
+  deter_dim: 2048 # (default 2048) increased as images are more complex
+  stoch_dim: 32 # default (32)
+  stoch_discrete: 32 # default (64)
+  hidden_dim: 1000 # default 1000
   gru_layers: 1
   gru_type: gru
   layer_norm: True
   vecobs_size: 0
   image_encoder: cnn
-  cnn_depth: 48
+  cnn_depth: 48 # (default 48) increase cnn_depth
   image_encoder_layers: 0
   image_decoder: cnn
   image_decoder_layers: 0
@@ -219,6 +227,9 @@ minigrid:
   image_decoder_layers: 2
   probe_model: none
   imag_horizon: 1
+
+  # generator_prefill_steps: 5_000
+
 
 miniworld:
   # env_id: MiniWorld-MazeS7GridA4C-v1

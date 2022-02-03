@@ -511,27 +511,29 @@ def prepare_batch_npz(data: Dict[str, Tensor], take_b=999):
                 f'Unexpected 2D tensor: {key}: {x.shape}, {x.dtype}'
 
         elif len(x.shape) == 5:  # 3D tensor - image
-            print(x.shape, [type(vec) for vec in x])
             assert x.dtype == np.float32 and (key.startswith('image') or key.startswith('map')), \
                 f'Unexpected 3D tensor: {key}: {x.shape}, {x.dtype}'
 
             if x.shape[-1] == x.shape[-2]:  # (T,B,C,W,W)
                 x = x.transpose(0, 1, 3, 4, 2)  # => (T,B,W,W,C)
             assert x.shape[-2] == x.shape[-3], 'Assuming rectangular images, otherwise need to improve logic'
-
-            # print(x.sum(axis=-1), x.max(axis=-1))
-            x = x.argmax(axis=-1)
-            # if x.shape[-1] in [1, 3]:
-            #     # RGB or grayscale
-            #     x = ((x + 0.5) * 255.0).clip(0, 255).astype('uint8')
-            # elif np.allclose(x.sum(axis=-1), 1.0) and np.allclose(x.max(axis=-1), 1.0):
-            #     # One-hot
-            #     x = x.argmax(axis=-1)
-            # else:
-            #     # Categorical logits
-            #     assert key in ['map_rec', 'image_rec', 'image_pred'], \
-            #         f'Unexpected 3D categorical logits: {key}: {x.shape}'
-            #     x = scipy.special.softmax(x, axis=-1)
+            # breakpoint()
+            # print('after', x.shape)
+            # print(x.sum(axis=-1)[:25], x.max(axis=-1)[:25])
+            # print(np.allclose(x.sum(axis=-1), 1.0), np.allclose(x.max(axis=-1), 1.0))
+            # print(np.unique(x, return_counts=True))
+            # x = x.argmax(axis=-1)
+            if x.shape[-1] in [1, 3]:
+                # RGB or grayscale
+                x = ((x + 0.5) * 255.0).clip(0, 255).astype('uint8')
+            elif np.allclose(x.sum(axis=-1), 1.0) and np.allclose(x.max(axis=-1), 1.0):
+                # One-hot
+                x = x.argmax(axis=-1)
+            else:
+                # Categorical logits
+                assert key in ['map_rec', 'image_rec', 'image_pred'], \
+                    f'Unexpected 3D categorical logits: {key}: {x.shape}'
+                x = scipy.special.softmax(x, axis=-1)
 
         x = x.swapaxes(0, 1)  # type: ignore  # (T,B,*) => (B,T,*)
         return x

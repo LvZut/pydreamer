@@ -12,13 +12,17 @@ def to_onehot(x: np.ndarray, n_categories) -> np.ndarray:
 
 
 def img_to_onehot(x: np.ndarray, n_categories) -> np.ndarray:
+    print(x.shape, n_categories)
     x = to_onehot(x, n_categories)
+    print(type(x))
+    print(x.shape, x, '\n\n\n\n\n')
     x = x.transpose(0, 1, 4, 2, 3)  # (T, B, H, W, C) => (T, B, C, H, W)
     return x
 
 
 def to_image(x: np.ndarray) -> np.ndarray:
     if x.dtype == np.uint8:
+        print('-------------------------\nx dtype uint8! \n\n')
         x = x.astype(np.float32)
         x = x / 255.0 - 0.5  # type: ignore
     else:
