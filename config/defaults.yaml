@@ -43,7 +43,7 @@ defaults:
 
   # decrease learning rate
   # adam_lr: 3.0e-4
-  adam_lr: 3.0e-5
+  adam_lr: 3.0e-4
 
   adam_lr_actor: 1.0e-4
   adam_lr_critic: 1.0e-4
@@ -114,14 +114,16 @@ defaults:
 
 carla:
   env_id: CARLA-GYM
-  data_workers: 1 # also number of carla sessions (up to ~5gb GPU memory per worker)
-  generator_workers: 1
-  generator_prefill_steps: 5_000
+  data_workers: 1  # workers that load saved data into dataloader
+  generator_workers: 1 # also number of carla sessions (up to ~5gb GPU memory per worker)
+  generator_prefill_steps: 3_000
   # resume_id:
 
   # 2 possible actions, 12 channels in BEV
   action_dim: 2
   image_channels: 13
+
+  # turns image into one-hot encoded (adds additional dimension)
   # image_categorical: True
 
   # # map
@@ -189,6 +191,9 @@ carla:
   imag_horizon: 15
   actor_grad: reinforce
 
+ # decrease learning rate
+  # adam_lr: 3.0e-4
+  adam_lr: 3.0e-6
 
 atari:
   n_steps: 99_000_000

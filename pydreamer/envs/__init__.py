@@ -48,13 +48,14 @@ def create_env(env_id: str, no_terminal: bool, env_time_limit: int, env_action_r
         import carla_gym
 
         # sensors
-        bev = carla_gym.sensors.BirdeyeSensor(params={"show_window": True})
+        bev = carla_gym.sensors.BirdeyeSensor(params={"show_window": False, "onehot": True})
         params = {"sensors": [bev]}
 
         # other params
         
 
         env = gym.make('carla-v0', params=params)
+        env = DictWrapper(env)
         
         
     
