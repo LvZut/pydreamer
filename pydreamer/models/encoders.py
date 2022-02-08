@@ -19,7 +19,8 @@ class MultiEncoder(nn.Module):
 
         if conf.image_encoder == 'cnn':
             self.encoder_image = ConvEncoder(in_channels=encoder_channels,
-                                             cnn_depth=conf.cnn_depth)
+                                             cnn_depth=conf.cnn_depth,
+                                             image_size=conf.image_size)
         elif conf.image_encoder == 'dense':
             self.encoder_image = DenseEncoder(in_dim=conf.image_size * conf.image_size * encoder_channels,
                                               out_dim=256,
@@ -71,32 +72,57 @@ class MultiEncoder(nn.Module):
 
 class ConvEncoder(nn.Module):
 
-    def __init__(self, in_channels=3, cnn_depth=32, activation=nn.ELU):
+    def __init__(self, in_channels=3, cnn_depth=32, activation=nn.ELU, image_size=256):
         super().__init__()
-        # this determines the embed dim, 32 is hardcoded for an input image size of 64
-        # cnn_depth*32*9 for 126, cnn_depth*32*49 for 256
-        self.out_dim = cnn_depth * 32 * 18
+        
         kernels = (4, 4, 4, 4)
         stride = 2
         d = cnn_depth
-        self.model = nn.Sequential(
-            nn.Conv2d(in_channels, d, kernels[0], stride),
-            activation(),
-            nn.Conv2d(d, d * 2, kernels[1], stride),
-            activation(),
-            nn.Conv2d(d * 2, d * 4, kernels[2], stride),
-            activation(),
-            nn.Conv2d(d * 4, d * 8, kernels[3], stride),
-            activation(),
 
-            # added an additional 2 layers for smaller embedding
-            # makes embedding more than 10x smaller
-            nn.Conv2d(d * 8, d * 16, kernels[3], stride),
-            activation(),
-            # nn.Conv2d(d * 16, d * 32, kernels[3], stride),
-            # activation(),
-            nn.Flatten()
-        )
+        if image_size == 128:
+            # this determines the embed dim, 32 is hardcoded for an input image size of 64
+            # cnn_depth*32*9 for 126, cnn_depth*32*18 for 256
+            self.out_dim = cnn_depth * 32 * 9
+            self.model = nn.Sequential(
+                nn.Conv2d(in_channels, d, kernels[0], stride),
+                activation(),
+                nn.Conv2d(d, d * 2, kernels[1], stride),
+                activation(),
+                nn.Conv2d(d * 2, d * 4, kernels[2], stride),
+                activation(),
+                nn.Conv2d(d * 4, d * 8, kernels[3], stride),
+                activation(),
+
+                # added an additional 2 layers for smaller embedding
+                # makes embedding more than 10x smaller
+                # nn.Conv2d(d * 8, d * 16, kernels[3], stride),
+                # activation(),
+                # nn.Conv2d(d * 16, d * 32, kernels[3], stride),
+                # activation(),
+                nn.Flatten()
+            )
+        elif image_size == 256:
+            self.out_dim = cnn_depth * 32 * 18
+            self.model = nn.Sequential(
+                nn.Conv2d(in_channels, d, kernels[0], stride),
+                activation(),
+                nn.Conv2d(d, d * 2, kernels[1], stride),
+                activation(),
+                nn.Conv2d(d * 2, d * 4, kernels[2], stride),
+                activation(),
+                nn.Conv2d(d * 4, d * 8, kernels[3], stride),
+                activation(),
+
+                # added an additional 2 layers for smaller embedding
+                # makes embedding more than 10x smaller
+                nn.Conv2d(d * 8, d * 16, kernels[3], stride),
+                activation(),
+                # nn.Conv2d(d * 16, d * 32, kernels[3], stride),
+                # activation(),
+                nn.Flatten()
+            )
+
+
 
     def forward(self, x):
         x, bd = flatten_batch(x, 3)

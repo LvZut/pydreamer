@@ -116,7 +116,7 @@ carla:
   env_id: CARLA-GYM
   data_workers: 1  # workers that load saved data into dataloader
   generator_workers: 1 # also number of carla sessions (up to ~5gb GPU memory per worker)
-  generator_prefill_steps: 3_000
+  generator_prefill_steps: 100_000
   # resume_id:
 
   # 2 possible actions, 12 channels in BEV
@@ -131,6 +131,18 @@ carla:
   # map_size: 12
   # map_channels: 12
   # map_categorical: True
+
+  # Features
+  image_key: image
+  image_size: 128
+
+
+  # map_key:
+  # map_size: 11
+  # map_channels: 4
+  # map_categorical: True
+  # action_dim: 0
+  # clip_rewards:
 
   # currently limited by GPU memory
   batch_length: 2

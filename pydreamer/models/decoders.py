@@ -19,7 +19,8 @@ class MultiDecoder(nn.Module):
         if conf.image_decoder == 'cnn':
             self.image = ConvDecoder(in_dim=features_dim,
                                      out_channels=conf.image_channels,
-                                     cnn_depth=conf.cnn_depth)
+                                     cnn_depth=conf.cnn_depth,
+                                     image_size=conf.image_size)
         elif conf.image_decoder == 'dense':
             self.image = CatImageDecoder(in_dim=features_dim,
                                          out_shape=(conf.image_channels, conf.image_size, conf.image_size),
@@ -108,8 +109,8 @@ class ConvDecoder(nn.Module):
                  cnn_depth=32,
                  mlp_layers=0,
                  layer_norm=True,
-                 activation=nn.ELU
-                 ):
+                 activation=nn.ELU,
+                 image_size=256):
         super().__init__()
         self.in_dim = in_dim
         kernels = (5, 5, 6, 6)
@@ -135,6 +136,7 @@ class ConvDecoder(nn.Module):
                     norm(hidden_dim, eps=1e-3),
                     activation()]
 
+        # if image_size==64:
         # self.model = nn.Sequential(
         #     # FC
         #     *layers,
@@ -148,23 +150,42 @@ class ConvDecoder(nn.Module):
         #     activation(),
         #     nn.ConvTranspose2d(d, out_channels, kernels[3], stride))
 
-        # added 2 additional layers to go from output size 64x64 to 256x256
-        self.model = nn.Sequential(
-            # FC
-            *layers,
-            nn.Unflatten(-1, (d * 32, 1, 1)),  # type: ignore
-            # Deconv
-            nn.ConvTranspose2d(d * 32, d * 16, kernels[0], stride),
-            activation(),
-            nn.ConvTranspose2d(d * 16, d * 8, kernels[1], stride),
-            activation(),
-            nn.ConvTranspose2d(d * 8, d * 4, kernels[1], stride),
-            activation(),
-            nn.ConvTranspose2d(d * 4, d * 2, kernels[1], stride),
-            activation(),
-            nn.ConvTranspose2d(d * 2, d, kernels[2], stride),
-            activation(),
-            nn.ConvTranspose2d(d, out_channels, kernels[3], stride))
+        if image_size == 128:
+            # added 1 additional layers to go from output size 64x64 to 128x128
+            self.model = nn.Sequential(
+                # FC
+                *layers,
+                nn.Unflatten(-1, (d * 32, 1, 1)),  # type: ignore
+                # Deconv
+                # nn.ConvTranspose2d(d * 32, d * 16, kernels[0], stride),
+                # activation(),
+                nn.ConvTranspose2d(d * 32, d * 8, kernels[1], stride),
+                activation(),
+                nn.ConvTranspose2d(d * 8, d * 4, kernels[1], stride),
+                activation(),
+                nn.ConvTranspose2d(d * 4, d * 2, kernels[1], stride),
+                activation(),
+                nn.ConvTranspose2d(d * 2, d, kernels[2], stride),
+                activation(),
+                nn.ConvTranspose2d(d, out_channels, kernels[3], stride))
+        elif image_size == 256:
+            # added 2 additional layers to go from output size 64x64 to 256x256
+            self.model = nn.Sequential(
+                # FC
+                *layers,
+                nn.Unflatten(-1, (d * 32, 1, 1)),  # type: ignore
+                # Deconv
+                nn.ConvTranspose2d(d * 32, d * 16, kernels[0], stride),
+                activation(),
+                nn.ConvTranspose2d(d * 16, d * 8, kernels[1], stride),
+                activation(),
+                nn.ConvTranspose2d(d * 8, d * 4, kernels[1], stride),
+                activation(),
+                nn.ConvTranspose2d(d * 4, d * 2, kernels[1], stride),
+                activation(),
+                nn.ConvTranspose2d(d * 2, d, kernels[2], stride),
+                activation(),
+                nn.ConvTranspose2d(d, out_channels, kernels[3], stride))
             
         
         # print(self.model)
