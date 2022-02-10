@@ -116,7 +116,7 @@ carla:
   env_id: CARLA-GYM
   data_workers: 1  # workers that load saved data into dataloader
   generator_workers: 1 # also number of carla sessions (up to ~5gb GPU memory per worker)
-  generator_prefill_steps: 50_000
+  generator_prefill_steps: 1_000
   generator_prefill_policy: AutoPilotPolicy # random with more chance to accelerate
   # resume_id:
 
