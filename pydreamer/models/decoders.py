@@ -136,21 +136,22 @@ class ConvDecoder(nn.Module):
                     norm(hidden_dim, eps=1e-3),
                     activation()]
 
-        # if image_size==64:
-        # self.model = nn.Sequential(
-        #     # FC
-        #     *layers,
-        #     nn.Unflatten(-1, (d * 32, 1, 1)),  # type: ignore
-        #     # Deconv
-        #     nn.ConvTranspose2d(d * 32, d * 4, kernels[0], stride),
-        #     activation(),
-        #     nn.ConvTranspose2d(d * 4, d * 2, kernels[1], stride),
-        #     activation(),
-        #     nn.ConvTranspose2d(d * 2, d, kernels[2], stride),
-        #     activation(),
-        #     nn.ConvTranspose2d(d, out_channels, kernels[3], stride))
+        if image_size==64:
+            # original implementation
+            self.model = nn.Sequential(
+                # FC
+                *layers,
+                nn.Unflatten(-1, (d * 32, 1, 1)),  # type: ignore
+                # Deconv
+                nn.ConvTranspose2d(d * 32, d * 4, kernels[0], stride),
+                activation(),
+                nn.ConvTranspose2d(d * 4, d * 2, kernels[1], stride),
+                activation(),
+                nn.ConvTranspose2d(d * 2, d, kernels[2], stride),
+                activation(),
+                nn.ConvTranspose2d(d, out_channels, kernels[3], stride))
 
-        if image_size == 128:
+        elif image_size == 128:
             # added 1 additional layers to go from output size 64x64 to 128x128
             self.model = nn.Sequential(
                 # FC

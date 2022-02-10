@@ -48,7 +48,7 @@ def create_env(env_id: str, no_terminal: bool, env_time_limit: int, env_action_r
         import carla_gym
 
         # sensors
-        bev = carla_gym.sensors.BirdeyeSensor(params={"width": 128, "height": 128, "show_window": False, "onehot": True})
+        bev = carla_gym.sensors.BirdeyeSensor(params={"width": 64, "height": 64, "show_window": True, "bev_type": 'RGB', 'pixels_per_meter' : 1.5})
         params = {"sensors": [bev]}
         # other params
         

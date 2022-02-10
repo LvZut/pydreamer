@@ -101,6 +101,8 @@ def main(env_id='MiniGrid-MazeS11N-v0',
         step_size = env.params.params['forward_step'].default / env.room_size  # type: ignore
         turn_size = env.params.params['turn_step'].default  # type: ignore
         policy = MazeDijkstraPolicy(step_size, turn_size)
+    elif policy == 'AutoPilotPolicy':
+        policy = AutoPilotPolicy(env.action_space)
     else:
         assert False, 'Unknown policy'
 
@@ -254,6 +256,21 @@ def main(env_id='MiniGrid-MazeS11N-v0',
 
     info('Generator done.')
 
+
+
+class AutoPilotPolicy:
+    # TODO add carla autopilot controller here
+    def __init__(self, action_space):
+        self.action_space = action_space
+
+    def __call__(self, obs) -> Tuple[int, dict]:
+        sample = self.action_space.sample()
+        for _ in range(2):
+            new_sample = self.action_space.sample()
+            if new_sample[0] > sample[0]:
+                sample = new_sample
+
+        return sample, {}
 
 class RandomPolicy:
     def __init__(self, action_space):

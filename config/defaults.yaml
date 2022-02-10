@@ -116,12 +116,13 @@ carla:
   env_id: CARLA-GYM
   data_workers: 1  # workers that load saved data into dataloader
   generator_workers: 1 # also number of carla sessions (up to ~5gb GPU memory per worker)
-  generator_prefill_steps: 100_000
+  generator_prefill_steps: 50_000
+  generator_prefill_policy: AutoPilotPolicy # random with more chance to accelerate
   # resume_id:
 
-  # 2 possible actions, 12 channels in BEV
+  # 2 possible actions, 12 (onehot) / 3 (RGB) channels in BEV
   action_dim: 2
-  image_channels: 13
+  image_channels: 3
 
   # turns image into one-hot encoded (adds additional dimension)
   # image_categorical: True
@@ -134,7 +135,7 @@ carla:
 
   # Features
   image_key: image
-  image_size: 128
+  image_size: 64
 
 
   # map_key:
@@ -154,7 +155,7 @@ carla:
   # test_batches: 61  # For unbiased test needs to be enough to cover full episodes
   test_batches: 1000 # (default 61 for atari) full episode
   test_batch_size: 1  # Smaller for faster test
-  eval_batches: 1000  # Big enough to reach episode end (xN). +1 to log last episode
+  eval_batches: 1001  # Big enough to reach episode end (xN). +1 to log last episode
   eval_samples: 10  # Big enough for good sampling
   eval_batch_size: 1  # Limited by GPU mem (default is 10)
 
@@ -163,7 +164,7 @@ carla:
   reset_interval: 200
   iwae_samples: 1
   kl_balance: 0.8
-  kl_weight: 1.0 # (0.1 for atari games) paper mentions Beta = 1.0 for continuous control
+  kl_weight: 1.0 # (0.1 for atari games) paper mentions Beta = 1.0 for continuous control, 3.0 for dmclab
   image_weight: 1.0
   vecobs_weight: 1.0
   reward_weight: 1.0
@@ -172,16 +173,16 @@ carla:
 
   # Model
   model: dreamer
-  deter_dim: 2048 # (default 2048) increased as images are more complex
-  stoch_dim: 32 # default (32)
-  stoch_discrete: 32 # default (64)
+  deter_dim: 1024 # default 1028
+  stoch_dim: 32 # default 32
+  stoch_discrete: 32 # default 32
   hidden_dim: 1000 # default 1000
   gru_layers: 1
   gru_type: gru
   layer_norm: True
   vecobs_size: 0
   image_encoder: cnn
-  cnn_depth: 48 # (default 48) increase cnn_depth
+  cnn_depth: 48 # (default 48) cnn_depth
   image_encoder_layers: 0
   image_decoder: cnn
   image_decoder_layers: 0
@@ -205,7 +206,7 @@ carla:
 
  # decrease learning rate
   # adam_lr: 3.0e-4
-  adam_lr: 3.0e-6
+  adam_lr: 3.0e-4
 
 atari:
   n_steps: 99_000_000
@@ -216,7 +217,7 @@ atari:
   env_action_repeat: 4
   env_time_limit: 27_000  # =108_000/action_repeat = 30 minutes of game play.
   generator_workers: 1
-  generator_prefill_steps: 2_000
+  generator_prefill_steps: 50_000
   clip_rewards: tanh
   # Model
   deter_dim: 1024
