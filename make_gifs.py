@@ -50,13 +50,13 @@ def encode_gif(frames, fps):
     del proc
     return out
 
-def make_gif(path_name, run_id, step, fps=FPS):
+def make_gif(path_name, run_id, step, fps=FPS, image_size=64):
     dest_path = f'{path_name}_{step}.gif'
     artifact = f'd2_wm_dream/{step}.npz'
     data = download_artifact_npz(run_id, artifact)
     img = data['image_pred']
     print(img.shape)
-    img = img[:B, :T].reshape((-1, 64, 64, 3))[:,:,:,:3]
+    img = img[:B, :T].reshape((-1, image_size, image_size, 3))[:,:,:,:3]
     gif = encode_gif(img, fps)
     with Path(dest_path).open('wb') as f:
         f.write(gif)
@@ -138,6 +138,12 @@ def main(args):
     else:
         file_name = "results/atari/figures/dream"
 
+    if len(args) > 3:
+        if type(args) != int:
+            exit("invalid image size")
+        image_size = int(args[3])
+    else:
+        image_size = 64
 
     if len(args) > 1:
         dream_num = process_dream_num(args[1])
@@ -147,13 +153,13 @@ def main(args):
 
         for dream_file in files:
             dream_num = dream_file[:7]
-            make_gif(file_name, run_id, dream_num)
+            make_gif(file_name, run_id, dream_num, image_size)
 
         exit('done')
     
 
 
-    make_gif(file_name, run_id, dream_num)
+    make_gif(file_name, run_id, dream_num, image_size)
 
 
 
