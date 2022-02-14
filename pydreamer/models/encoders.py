@@ -81,6 +81,9 @@ class ConvEncoder(nn.Module):
 
         if image_size == 64:
             self.out_dim = cnn_depth * 32
+            kernels = (4, 4, 4, 4)
+            stride = 2
+            d = cnn_depth
             self.model = nn.Sequential(
                 nn.Conv2d(in_channels, d, kernels[0], stride),
                 activation(),
@@ -92,6 +95,7 @@ class ConvEncoder(nn.Module):
                 activation(),
                 nn.Flatten()
             )
+        
         elif image_size == 128:
             # this determines the embed dim, 32 is hardcoded for an input image size of 64
             # cnn_depth*32*9 for 126, cnn_depth*32*18 for 256

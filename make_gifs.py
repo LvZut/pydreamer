@@ -113,10 +113,11 @@ def get_latest():
 # args: dream_name, dream number, run id
 def main(args):
     # get run id
-    if str(args) == 'latest':
-        run_id = get_latest()
+
     if len(args) > 2:
-        if len(args) == 32:
+        if str(args[2]) == 'latest':
+            run_id = get_latest()
+        if len(args[2]) == 32:
             run_id = str(args[2])
         else:
             exit("invalid run id")
