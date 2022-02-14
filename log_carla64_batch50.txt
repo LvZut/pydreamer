@@ -1,0 +1,2084 @@
+[TRAIN]  Starting or resuming mlflow run (local) ...[0m
+[TRAIN]  Started mlflow run 6e95acd6fade4fa9a0587c0cc0b3eab1 in experiment 0[0m
+[TRAIN]  Generator prefilling random data (1000 steps)...[0m
+[32m[GEN 0]  Generator 0 started: env=CARLA-GYM, n_steps=1000, split_fraction=0.0, metrics=agent, save_uri=file:///saivvy/pydreamer/mlruns/0/6e95acd6fade4fa9a0587c0cc0b3eab1/artifacts/episodes/0[0m
+[32m[GEN 0]  Found existing 0 files, 0 episodes, 0 steps in ['file:///saivvy/pydreamer/mlruns/0/6e95acd6fade4fa9a0587c0cc0b3eab1/artifacts/episodes/0'][0m
+Connecting to CARLA server...
+Connected!
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 143 walkers[0m
+[32m[GEN 0]  Removed 43 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+[90m[GEN 0]  Attempting to acquire lock 139922832356976 on /home/saivvier/.cache/carlapi/Carla/Maps/Town02__px_per_meter=1.5__opendrive_hash=7294cc51da5435fa1d269f68dbfa304ca34f6ad2__margin=300.npy.lock[0m
+[90m[GEN 0]  Lock 139922832356976 acquired on /home/saivvier/.cache/carlapi/Carla/Maps/Town02__px_per_meter=1.5__opendrive_hash=7294cc51da5435fa1d269f68dbfa304ca34f6ad2__margin=300.npy.lock[0m
+[32m[GEN 0]  Loading cache from /home/saivvier/.cache/carlapi/Carla/Maps/Town02__px_per_meter=1.5__opendrive_hash=7294cc51da5435fa1d269f68dbfa304ca34f6ad2__margin=300.npy[0m
+[32m[GEN 0]  Loaded static layers from cache file: /home/saivvier/.cache/carlapi/Carla/Maps/Town02__px_per_meter=1.5__opendrive_hash=7294cc51da5435fa1d269f68dbfa304ca34f6ad2__margin=300.npy[0m
+[90m[GEN 0]  Attempting to release lock 139922832356976 on /home/saivvier/.cache/carlapi/Carla/Maps/Town02__px_per_meter=1.5__opendrive_hash=7294cc51da5435fa1d269f68dbfa304ca34f6ad2__margin=300.npy.lock[0m
+[90m[GEN 0]  Lock 139922832356976 released on /home/saivvier/.cache/carlapi/Carla/Maps/Town02__px_per_meter=1.5__opendrive_hash=7294cc51da5435fa1d269f68dbfa304ca34f6ad2__margin=300.npy.lock[0m
+[90m[GEN 0]  Episode data sample:  {'image': (104, 128, 128, 3), 'action': (104, 2), 'reward': (104,), 'terminal': (104,), 'reset': (104,), 'policy_value': (104,), 'policy_entropy': (104,), 'action_prob': (104,)}[0m
+[32m[GEN 0]  Episode recorded:  steps: 103,  reward: -87.77443500850251,  terminal: 1,  visited: 0.0%,  total steps: 103,  episodes: 1,  fps: 16[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 146 walkers[0m
+[32m[GEN 0]  Removed 46 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+[32m[GEN 0]  Episode recorded:  steps: 70,  reward: -100.73192487088835,  terminal: 1,  visited: 0.0%,  total steps: 173,  episodes: 2,  fps: 17[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 143 walkers[0m
+[32m[GEN 0]  Removed 43 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+[32m[GEN 0]  Episode recorded:  steps: 56,  reward: -49.793367992481976,  terminal: 1,  visited: 0.0%,  total steps: 229,  episodes: 3,  fps: 18[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 135 walkers[0m
+[32m[GEN 0]  Removed 35 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+[32m[GEN 0]  Episode recorded:  steps: 94,  reward: -76.11621758088899,  terminal: 1,  visited: 0.0%,  total steps: 323,  episodes: 4,  fps: 17[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 148 walkers[0m
+[32m[GEN 0]  Removed 48 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+[32m[GEN 0]  Episode recorded:  steps: 66,  reward: -48.25546976511869,  terminal: 1,  visited: 0.0%,  total steps: 389,  episodes: 5,  fps: 18[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 144 walkers[0m
+[32m[GEN 0]  Removed 44 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+WARNING: NAV: Failed to set request to go to  59.1623 113.674 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  54.4941 298.506 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  132.526 114.426 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  159.535 299.044 0.470322 
+WARNING: NAV: failed to set max speed 
+[32m[GEN 0]  Episode recorded:  steps: 72,  reward: -78.1255733618778,  terminal: 1,  visited: 0.0%,  total steps: 461,  episodes: 6,  fps: 18[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 141 walkers[0m
+[32m[GEN 0]  Removed 41 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+WARNING: NAV: Failed to set request to go to  119.78 245.81 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.6676 229.104 0.435803 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.69477 110.093 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  144.424 298.32 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.779168 298.099 0.462963 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -1.18057 166.981 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  172.098 232.291 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  132.116 102.264 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  1.19793 139.486 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  36.4894 267.021 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  187.088 223.639 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  9.01249 102.59 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  69.4477 196.667 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  102.119 243.42 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.103 180.812 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  156.463 299.688 0.423442 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  103.181 298.733 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  39.2281 267.353 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.5082 161.113 0.476778 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.65595 162.254 0.433835 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  68.068 232.188 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  83.6337 112.682 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  20.3933 103.189 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -1.0684 169.211 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  3.62976 183.753 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  109.899 195.219 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  158.259 183.643 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  109.449 233.431 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  145.695 196.236 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  154.956 311.346 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  24.765 309.832 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.313729 287.751 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  140.628 221.813 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  48.9669 285.76 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  179.143 183.149 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.632 221.899 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  144.851 114.391 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  62.3951 102.679 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  187.659 264.918 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  6.75281 311.802 0.43627 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  49.5498 271.857 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  86.7512 194.16 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  195.852 302.956 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  52.5704 196.086 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  176.653 112.612 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  127.194 215.785 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.821 214.771 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  100.025 244.148 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  143.289 193.942 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  184.441 159.032 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.531455 172.883 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  117.625 232.389 0.406884 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  127.92 229.923 0.442832 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  9.55615 102.611 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  151.178 102.508 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  48.9928 246.186 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  170.335 184.305 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.671 283.475 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  184.436 285.562 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  57.8811 113.897 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.1054 125.938 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  71.5659 195.726 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  58.1292 243.433 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  98.5925 233.917 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.5566 162.358 0.440797 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  37.7004 221.578 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.395 150.083 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  143.673 194.677 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -1.02672 218.791 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  199.491 194.718 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  160.182 194.467 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  115.393 299.708 0.42974 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  156.284 184.008 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  118.443 232.773 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.604 232.758 0.480444 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  22.9043 311.094 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.229 128.748 0.405664 
+WARNING: NAV: failed to set max speed 
+[32m[GEN 0]  Episode recorded:  steps: 88,  reward: -65.54053124873231,  terminal: 1,  visited: 0.0%,  total steps: 549,  episodes: 7,  fps: 23[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 139 walkers[0m
+[32m[GEN 0]  Removed 39 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+WARNING: NAV: Failed to set request to go to  184.033 311.703 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.102 227.276 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  8.1007 103.224 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  100.3 185.059 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  61.7461 232.753 0.411764 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  22.0509 112.671 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  129.17 206.65 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  1.54047 100.59 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  38.1753 261.339 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  77.8482 310.784 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.098 207.142 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  55.6688 194.367 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  83.6482 113.327 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.9135 169.758 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  39.7694 216.195 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  53.028 245.778 0.412365 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  51.014 267.788 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  110.738 193.95 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  170.21 112.495 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  134.872 102.653 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -1.05134 142.764 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  87.8356 112.542 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  52.007 184.263 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.89382 165.167 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  139.635 245.015 0.500572 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  165.684 193.722 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  47.9343 114.624 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  97.9433 185.223 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.84795 255.341 0.426721 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.285 182.157 0.466229 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.895 233.588 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.0146 273.963 0.421569 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  107.329 103.007 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  113.049 114.344 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.248 263.865 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.431288 288.688 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  13.9624 102.979 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.0706 244.925 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  116.804 309.076 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  128.864 244.206 0.505665 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  110.175 231.989 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.437 257.484 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  73.2099 308.702 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  187.269 255.89 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -13.3872 157.301 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  150.38 234.877 0.487352 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  53.5515 182.832 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  68.6938 184.907 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.802394 286.253 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.212 190.535 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  118.868 231.479 0.547418 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  56.9324 243.223 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  103.576 231.884 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  15.2217 299.879 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  127.166 114.001 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  23.2886 298.796 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  139.543 209.955 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  199.615 181.586 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  140.784 99.8122 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.872 285.004 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  175.574 299.929 0.453395 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  145.42 111.855 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  105.429 114.613 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.6449 153.365 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  60.358 101.921 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.0789 292.661 0.480319 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  121.563 233.558 0.428362 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  184.759 182.677 0.463809 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  10.3112 100.269 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  189.123 309.38 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  51.5524 299.375 0.416547 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  100.422 310.212 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  140.338 243.035 0.467747 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  59.2802 300.557 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  92.203 297.742 0.424543 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  38.596 259.395 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  147.03 195.358 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  166.9 299.44 0.451444 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.6804 283.008 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  24.9871 100.026 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  163.026 244.812 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  180.485 100.53 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  155.698 195.188 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  36.5287 184.473 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  98.9203 182.877 0.405664 
+WARNING: NAV: failed to set max speed 
+[32m[GEN 0]  Episode recorded:  steps: 62,  reward: -49.01773068319395,  terminal: 1,  visited: 0.0%,  total steps: 611,  episodes: 8,  fps: 24[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 127 walkers[0m
+[32m[GEN 0]  Removed 27 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+WARNING: NAV: Failed to set request to go to  152.283 101.14 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.417 183.815 0.44551 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  60.7271 310.734 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  94.9528 184.553 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  198.141 235.862 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.094 215.459 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  95.2835 233.315 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  124.131 195 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.1411 102.716 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  156.525 194.847 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  73.5267 309.041 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  30.8862 299.7 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.22107 212.635 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.455 151.97 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  175.145 182.418 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  158.89 310.813 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.25 150.059 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  124.519 234.557 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  140.869 220.771 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  174.464 100.84 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.103 181.584 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  104.977 102.211 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  49.4717 261.501 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  34.0863 196.482 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  81.6851 297.161 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  131.008 101.895 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.0591562 153.741 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  122.365 185.165 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  166.331 183.611 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  1.05435 208.843 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -1.19804 123.701 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.678279 283.897 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  99.172 233.246 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  145.637 182.522 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  163.396 195.711 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  139.231 112.458 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -13.1201 132.276 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  199.569 166.853 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  120.514 183.758 0.410541 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  3.47477 184.393 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.0613 310.549 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  158.942 185.188 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  170.144 243.193 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  93.6584 245.477 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.814 298.607 0.454024 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  48.2326 197.878 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  77.0362 114.445 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  120.702 195.174 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.827285 216.803 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  71.0357 243.111 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  110.224 311.41 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.313 262.106 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  81.6167 233.509 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.144 290.906 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  105.245 193.982 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  177.09 298.378 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  14.9974 196.042 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  133.961 181.951 0.44858 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  187.575 280.931 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  39.5137 239.17 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  135.438 100.819 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  81.3348 184.797 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  183.968 234.056 0.464983 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.79746 264.286 0.494664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  5.46897 299.228 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  48.8006 101.262 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.435 169.518 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  117.925 233.132 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  9.12458 300.197 0.431167 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  97.5744 111.486 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.71 221.388 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  140.666 218.936 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.0122 246.928 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.329 208.299 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.8801 310.726 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  133.195 100.678 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  86.9509 112.744 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.231 132.941 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  48.444 223.002 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  187.134 159.669 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.657 276.741 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  105.664 234.541 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -1.03634 277.407 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  37.4613 256.586 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  121.954 103.159 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  109.602 232.668 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  129.656 210.354 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  199.043 184.378 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  6.41053 101.55 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  46.8916 309.774 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  187.138 214.424 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  143.294 196.44 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  176.549 299.823 0.443799 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  20.7466 310.893 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.463 287.684 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.49072 242.44 0.41526 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  184.996 226.181 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  68.4757 184.314 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  177.594 193.95 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  1.09612 294.029 0.405664 
+WARNING: NAV: failed to set max speed 
+[32m[GEN 0]  Episode recorded:  steps: 45,  reward: -43.607490117155685,  terminal: 1,  visited: 0.0%,  total steps: 656,  episodes: 9,  fps: 21[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 133 walkers[0m
+[32m[GEN 0]  Removed 33 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+WARNING: NAV: Failed to set request to go to  0.395877 296.806 0.437123 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  95.1095 309.839 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.646639 209.317 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  39.0809 260.045 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  120.24 183.791 0.408222 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  144.666 310.276 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  63.1737 308.996 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.4377 132.843 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  154.093 185.35 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  164.354 102.097 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  131.155 112.337 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  99.3894 234.425 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.851 162.127 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  39.1653 222.145 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  47.5015 184.009 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  199.275 136.975 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  162.061 245.712 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -7.13506 306.191 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.7142 265.845 0.483174 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  150.201 232.997 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  10.6524 113.576 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  161.348 245.665 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  115.797 311.048 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  56.9085 244.444 0.429606 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  115.649 103.143 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  176.154 101.384 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  30.8382 195.978 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  26.3467 114.257 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  27.4826 182.429 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  199.058 193.575 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  92.4763 297.316 0.418382 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  56.8651 245.551 0.470517 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  187.624 256.044 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.694227 228.103 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.8471 239.478 0.440852 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  97.1369 184.837 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.1028 183.832 0.440691 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  22.4183 114.443 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  146.846 100.383 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  119.187 243.477 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  49.9261 248.411 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  81.4281 312.138 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  123.246 245.019 0.412771 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  69.7138 299.173 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  49.1773 183.86 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  49.2532 282.156 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.2627 154.006 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.0112 171.993 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.93611 234.9 0.449972 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  153.324 311.428 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  134.303 100.529 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  199.008 147.734 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  23.0732 185.489 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  57.739 312.579 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.2802 274.384 0.423449 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  4.46991 195.275 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  48.551 222.922 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  159.346 194.847 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  56.767 312.243 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  136.052 299.232 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  78.1347 297.955 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  18.4376 310.83 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  9.48098 196.047 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  158.349 100.05 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  64.3292 101.81 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  37.5803 284.258 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  105.495 310.877 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  42.4788 311.324 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.503056 250.407 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  125.259 113.463 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  160.587 183.327 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  135.007 246.287 0.427449 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  70.877 111.585 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  37.7775 246.583 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.413 161.561 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.029 276.277 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.077 279.957 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  154.177 244.304 0.447221 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  72.8603 113.547 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.517536 245.938 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.551 185.14 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  198.66 200.009 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.362705 258.27 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  90.7911 183.291 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  68.7763 182.509 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.262021 224.082 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  17.1354 309.389 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  145.998 244.818 0.505665 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.955 177.396 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  102.69 232.756 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  142.397 102.13 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  141.205 184.925 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  13.43 111.838 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  187.534 293.404 0.410344 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  72.4277 232.689 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.3227 157.656 0.429162 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  41.4265 309.716 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  199.434 166.807 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  16.2506 196.939 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  23.0081 310.182 0.405664 
+WARNING: NAV: failed to set max speed 
+[32m[GEN 0]  Episode recorded:  steps: 44,  reward: -36.82568017689804,  terminal: 1,  visited: 0.0%,  total steps: 700,  episodes: 10,  fps: 19[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 150 walkers[0m
+[32m[GEN 0]  Removed 50 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+WARNING: NAV: Failed to set request to go to  -10.0151 162.938 0.477373 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  127.7 232.6 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  176.904 99.6138 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.419 118.921 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  115.955 234.487 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  71.3962 103.282 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.55 204.678 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  83.5616 114.57 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -13.2971 237.813 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  169.637 196.333 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  49.6074 216.112 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  38.4627 224.596 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  172.509 232.83 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.185482 204.692 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -1.2283 160.869 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.986 208.057 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  116.766 113.35 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  158.451 100.934 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -13.2113 158.148 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.400046 261.851 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.617 258.459 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.6133 166.632 0.419769 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  157.94 102.529 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  116.711 299.814 0.463607 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  99.0839 246.263 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  166.795 183.929 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -1.25461 160.227 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  38.3728 207.761 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  138.637 300.363 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  56.7809 184.622 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  40.1512 114.071 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  134.045 245.159 0.492672 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  164.643 114.121 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  91.8763 194.393 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.0321 206.861 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  153.496 232.836 0.431177 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  5.00232 311.361 0.44952 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  2.50673 180.976 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  183.011 100.402 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  54.2043 246.262 0.453549 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  67.9526 102.737 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  37.6462 244.79 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  109.843 310.72 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  154.361 297.104 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  47.9118 267.185 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  179.975 243.291 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  15.1154 309.62 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.469 290.258 0.413661 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.836124 275.016 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  118.484 233.903 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.8143 301.341 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  92.5507 297.08 0.414641 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  51.0203 282.11 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.8941 267.265 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  198.14 266.698 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  165.959 309.264 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  100.543 244.759 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  199.332 181.595 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  38.2204 214.078 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  38.0596 224.61 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  163.383 245.694 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  143.678 244.907 0.505665 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  187.676 208.292 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.648 170.514 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  168.419 243.929 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  174.861 182.575 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  27.9841 194.086 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  137.577 311.982 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  125.315 299.234 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  59.9607 233.102 0.436146 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.512666 198.928 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  114.865 311.935 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  5.93575 194.563 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -13.0575 173.201 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.717658 129.588 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.91365 278.179 0.501873 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  176.033 298.67 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  140.574 214.997 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  37.071 295.55 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  104.426 100.748 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.727 120.45 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  133.194 100.978 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  140.899 245.856 0.454496 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.63393 229.318 0.49707 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  21.5851 184.403 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  198.212 202.389 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  159.393 183.121 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  101.118 195.239 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  128.148 232.123 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  28.4309 111.474 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  162.391 246.458 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.0267604 262.931 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.439925 125.874 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.4095 197.314 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.548 276.432 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.8281 201.303 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  68.6498 244.022 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.308 282.049 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  172.029 103.227 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.749 214.415 0.405664 
+WARNING: NAV: failed to set max speed 
+[32m[GEN 0]  Episode recorded:  steps: 51,  reward: -37.689364231625014,  terminal: 1,  visited: 0.0%,  total steps: 751,  episodes: 11,  fps: 21[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 133 walkers[0m
+[32m[GEN 0]  Removed 33 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+WARNING: NAV: Failed to set request to go to  197.98 301.22 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  110.141 245.288 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  95.4425 298.898 0.45772 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  139.133 216.871 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  1.32123 236.474 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  123.344 234.535 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  40.3685 184.913 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  119.153 233.21 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  85.8073 243.203 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  174.86 194.15 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.58715 209.577 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  76.3983 234.123 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.230334 116.694 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  2.22588 181.246 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  65.6953 245.902 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  39.0413 260.533 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.511 208.336 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.938 148.788 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  152.702 311.835 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  161.13 232.829 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.1803 215.278 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  55.7234 233.212 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.551 270.95 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  140.927 207.694 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  41.4185 183.874 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  57.2562 194.159 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  98.3699 310.72 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.60119 291.374 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  152.311 112.297 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  151.97 196.216 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.5612 273.198 0.413873 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.568 270.17 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.069 185.712 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  85.3069 232.901 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  156.199 234.116 0.413035 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  126.936 226.161 0.518944 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  74.3172 114.033 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  162.244 246.645 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  199.153 174.129 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  22.8178 311.947 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  167.765 242.889 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.2269 268.347 0.486761 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.219 161.353 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.658286 284.965 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  46.5709 185.435 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  58.332 245.638 0.463093 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  174.888 185.148 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  140.749 182.774 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -13.1661 254.35 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.1612 242.848 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  99.2532 103.043 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.4299 196.589 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  29.6773 310.908 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  51.4625 298.377 0.428712 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.378 178.585 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  104.239 311.747 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  112.019 112.385 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  130.407 103.269 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  118.053 245.884 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  166.988 194.309 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.6487 261.889 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  128.129 203.623 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  199.112 140.287 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  36.144 183.136 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  143.604 244.785 0.505665 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  20.8162 183.403 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  184.791 233.509 0.450593 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  163.805 113.407 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.828 160.237 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  126.293 226.125 0.592216 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  18.3844 182.863 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  102.856 113.548 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  39.7501 266.366 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  173.559 309.455 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.4549 220.803 0.455887 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  101.967 195.12 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  121.377 297.326 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  111.11 234.505 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  2.99992 196.622 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  152.067 196.011 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  77.6317 311.845 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.64099 126.982 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.785 298.812 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.8476 278.536 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  109.786 309.273 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  39.7192 198.64 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  94.0298 298.268 0.441088 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  8.81295 112.912 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.704314 119.319 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  39.7407 101.004 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  15.4771 193.764 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.973393 153.571 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  149.492 233.231 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.263 287.012 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.755 125.575 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.7789 300.955 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  52.2517 245.894 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  9.54744 195.685 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  101.315 233.295 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.37 282.249 0.405664 
+WARNING: NAV: failed to set max speed 
+[32m[GEN 0]  Episode recorded:  steps: 53,  reward: -48.76920404475781,  terminal: 1,  visited: 0.0%,  total steps: 804,  episodes: 12,  fps: 22[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 145 walkers[0m
+[32m[GEN 0]  Removed 45 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+WARNING: NAV: Failed to set request to go to  143.461 231.755 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  187.095 255.877 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  188.073 309.341 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  64.3565 246.222 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.91643 127.019 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.1207 300.836 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  144.963 246.539 0.417178 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.4849 290.53 0.430682 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  150.206 101.023 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  95.7409 182.439 0.464978 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.563 255.575 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  48.2345 267.789 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.0396 202.189 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  64.0615 183.402 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  147.638 300.677 0.414734 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  60.7471 193.872 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.588 156.348 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -8.21966 304.576 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  51.4388 282.117 0.449381 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  115.202 114.35 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.117 300.478 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  49.7415 280.682 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  180.077 111.634 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  127.142 214.342 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  144.119 114.343 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  138.717 311.735 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.2292 296.734 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.6184 291.788 0.432372 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  124.646 298.421 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  172.294 193.733 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  58.44 183.77 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.57894 220.688 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.587 243.864 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.133 203.251 0.439582 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  88.0425 243.335 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  176.617 309.047 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.1405 165.429 0.418697 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  182.878 195.1 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  108.527 309.513 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.252 275.764 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.146 191.964 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.571 248.676 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.44407 213.272 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.029 209.327 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  36.6398 289.825 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  178.652 311.22 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  195.911 249.345 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  159.84 232.027 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  141.963 220.362 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  36.7896 203.809 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -13.5985 254.088 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  95.7132 309.803 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.339463 283.985 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  158.5 195.374 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  63.844 244.186 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  172.043 113.417 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  25.2747 101.911 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.3622 145.905 0.414967 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  88.0235 243.594 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  171.866 231.863 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  1.22878 207.281 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  43.0085 311.467 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  18.9287 300.435 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.0732 134.181 0.421905 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  6.56124 309.502 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  75.6664 298.464 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.652 123.254 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.793766 200.502 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  45.711 184.162 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  37.4553 282.09 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  37.2765 293.797 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  38.4877 243.861 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.69 145.206 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  38.11 198.723 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.2197 286.427 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  140.703 214.324 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.286903 151.718 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  139.143 231.169 0.433212 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  111.532 232.067 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  165.848 185.125 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.6093 235.112 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  165.425 300.658 0.424763 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  36.6873 196.977 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  199.022 147.007 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  198.334 155.448 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  39.6621 280.968 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.0508 170.751 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  36.6835 259.379 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  72.1553 309.631 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  184.734 155.599 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  177.309 100.599 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  88.3658 299.742 0.442926 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  37.4902 287.617 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  167.464 184.887 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  144.65 194.407 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  104.494 242.973 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.287 283.914 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  48.2294 263.159 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.298 199.631 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  155.556 183.81 0.405664 
+WARNING: NAV: failed to set max speed 
+[32m[GEN 0]  Episode recorded:  steps: 63,  reward: -53.28451059379223,  terminal: 1,  visited: 0.0%,  total steps: 867,  episodes: 13,  fps: 21[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 142 walkers[0m
+[32m[GEN 0]  Removed 42 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+WARNING: NAV: Failed to set request to go to  181.925 310.853 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.416 213.473 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  31.5035 182.935 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  80.977 183.065 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  38.6516 237.811 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  18.1591 300.528 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.94282 260.397 0.46236 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.7911 155.576 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  102.682 193.955 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  2.12942 181.7 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  60.6517 183.227 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  14.0661 311.815 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  177.287 309.023 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  83.2913 243.347 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  36.8604 227.222 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  91.2327 194.098 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.3414 248.975 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  38.5071 294.6 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  19.8524 184.451 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  21.6913 194.626 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  177.725 195.426 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  71.1639 102.103 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  1.88492 309.136 0.461669 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  85.7366 183.341 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  127.103 219.89 0.536915 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -1.02391 273.439 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  127.347 183.652 0.431008 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  69.1519 311.436 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  51.5226 288.267 0.481532 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  198.383 188.668 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  103.704 114.578 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  132.437 300.455 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.427805 270.306 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  195.846 297.134 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  71.478 112.937 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -3.00379 104.542 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -8.65422 107.029 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.7612 138.674 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  174.645 184.422 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.59 240.538 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  6.99653 308.837 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  152.43 243.594 0.471633 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  166.299 100.011 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  138.612 215.004 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  162.401 195.456 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.5146 177.387 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  115.704 245.247 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  28.4836 298.415 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  37.6483 230.369 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  170.969 300.298 0.48645 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  8.19681 300.54 0.414728 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  164.554 299.447 0.425139 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.108 167.167 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.4545 296.16 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  59.2478 101.474 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  9.15923 299.343 0.42419 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  84.7438 112.126 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  150.347 242.899 0.423682 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  10.4224 112.005 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  9.67 185.261 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.22 273.434 0.413579 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  187.999 309.02 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.4826 261.249 0.406847 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  37.17 309.009 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.612 186.696 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  175.886 244.162 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -1.2964 117.092 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.949 138.19 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  154.27 196.873 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.1568 293.353 0.409844 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.063 166.529 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.4758 165.698 0.443185 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  89.3875 113.85 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  48.9421 288.371 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  152.021 232.233 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  23.0431 309.866 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  116.593 244.335 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.53 142.751 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  5.84182 312.182 0.422304 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  1.67401 135.847 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  77.7932 299.665 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  30.6288 185.134 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  161.952 194.34 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.525407 262.924 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  114.482 183.489 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  87.9463 114.517 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.005 162.163 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  172.648 183.115 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  26.5454 113.875 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.489 163.585 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.617261 231.739 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -1.0373 156.406 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  178.726 308.592 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  17.6658 311.905 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  168.238 183.733 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  74.0895 195.831 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  52.4835 195.972 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  52.9789 246.022 0.408553 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.560125 283.187 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  32.9648 184.296 0.405664 
+WARNING: NAV: failed to set max speed 
+[32m[GEN 0]  Episode recorded:  steps: 52,  reward: -62.12200036748134,  terminal: 1,  visited: 0.0%,  total steps: 919,  episodes: 14,  fps: 21[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 148 walkers[0m
+[32m[GEN 0]  Removed 48 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+WARNING: NAV: Failed to set request to go to  90.9523 296.595 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  50.0655 279.992 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.247 147.726 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  56.8576 182.796 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  187.648 212.188 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  180.214 233.935 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  86.5097 113.048 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  91.6774 298.892 0.442056 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.748 120.098 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -13.3366 139.673 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  198.109 171.252 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.49 243.813 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.613 267.313 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  170.696 194.162 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.403863 169.251 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  158.293 195.147 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  70.5412 310.261 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  184.404 152.604 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  118.435 195.049 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  163.59 182.992 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  97.798 184.812 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  141.081 194.821 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  123.546 311.289 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.543 270.672 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  99.017 300.493 0.478941 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  53.9486 246.743 0.417151 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  96.0245 102.191 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  107.701 234.34 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  199.275 132.912 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.79 278.543 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  198.275 162.978 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  49.3206 212.729 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  39.2357 270.898 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  95.9907 183.155 0.444457 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  135.997 300.484 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  76.2597 194.215 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  132.767 298.054 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  51.6054 288.946 0.474914 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  104.014 233.189 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.312393 121.623 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.073 277.298 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  123.132 182.65 0.505665 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  75.7792 102.82 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.021 163.111 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  166.309 308.82 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  127.35 195.66 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  25.0239 113.817 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  2.43724 311.586 0.437661 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  96.4151 113.855 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  58.2576 312.711 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  109.273 296.757 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  129.779 102.305 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  160.052 195.324 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  79.7995 308.79 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -1.15235 157.685 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  36.9164 223.965 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  20.8403 298.144 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.6718 249.211 0.439517 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  124.648 182.49 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  150.606 299.521 0.457076 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.7076 159.223 0.460483 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  127.743 246.707 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  1.00218 281.229 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  77.817 111.672 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  140.178 246.392 0.425172 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  158.769 114.283 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  2.73741 299.081 0.433835 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  49.4488 204.964 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  122.726 102.007 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  86.8002 112.017 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  86.9267 195.322 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  132.426 100.777 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -1.16888 204.695 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  154.565 296.695 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.6516 188.572 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.28 284.427 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  173.423 112.265 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  53.2076 196.332 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.67028 171.073 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  138.838 242.967 0.452759 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  69.3806 242.88 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  103.453 245.004 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  83.7179 196.235 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.5134 130.433 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  128.532 198.637 0.441533 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.895953 211.089 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.321603 177.69 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  68.7772 194.435 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  95.0477 233.469 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  72.6487 233.782 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.6119 169.972 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  38.098 223.334 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  99.8777 185.3 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  153.954 299.25 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  161.065 244.765 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  38.6715 310.456 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  198.488 144.447 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  184.803 299.285 0.501389 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  81.912 184.456 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  92.1422 195.714 0.405664 
+WARNING: NAV: failed to set max speed 
+[32m[GEN 0]  Episode recorded:  steps: 59,  reward: -43.02579504396426,  terminal: 1,  visited: 0.0%,  total steps: 978,  episodes: 15,  fps: 22[0m
+[32m[GEN 0]  Destroyed 151 actors[0m
+[32m[GEN 0]  Created 1 vehicles[0m
+[32m[GEN 0]  Created 50 vehicles[0m
+[32m[GEN 0]  Created 145 walkers[0m
+[32m[GEN 0]  Removed 45 walkers[0m
+[32m[GEN 0]  Created 100 walker controllers[0m
+WARNING: NAV: Failed to set request to go to  64.9271 183.57 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.858 147.075 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.874 126.947 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  21.8338 308.634 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  63.7992 194.527 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -0.173633 281.716 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -8.58152 302.604 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  167.266 299.326 0.466738 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  139.026 215.034 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  153.235 310.94 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  181.59 113.2 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  163.261 102.779 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.25 196.841 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  101.461 102.441 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  72.1037 231.931 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  66.3137 244.76 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  140.254 220.759 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  40.6049 309.408 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  101.764 299.833 0.410861 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  49.0645 291.362 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.984318 255.364 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  58.0946 194.912 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  49.6045 226.732 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  178.936 309.021 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  141.851 99.4659 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  37.8083 228.298 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  1.28249 181.845 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  0.747213 233.516 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  89.236 184.837 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  37.2705 211.877 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  199.197 128.498 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.129 232.936 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  159.085 196.406 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  121.522 185.35 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.738 252.961 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  197.231 181.732 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.249 242.542 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  185.675 278.808 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -1.28798 235.425 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  128.979 220.073 0.457211 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -9.44617 246.322 0.408897 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  19.2277 308.73 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  12.9975 101.981 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  67.2164 233.483 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  91.7394 102.861 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  37.3636 274.482 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  141.221 310.343 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  78.1008 296.809 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  81.7169 310.659 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  170.578 310.489 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  198.97 153.333 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.969 200.14 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  127.113 227.899 0.533786 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  70.9468 184.847 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  16.0841 194.133 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  128.531 219.264 0.453386 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  184.633 227.765 0.420813 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  16.7815 103.046 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.531 205.341 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  1.16125 231.625 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  48.8427 101.72 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  90.784 233.035 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  105.231 244.675 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  39.6839 251.607 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  104.868 113.108 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  38.081 258.617 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  139.708 196.697 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  196.886 248.241 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  179.639 113.792 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  66.9191 298.098 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  119.896 113.886 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  40.3986 310.862 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  80.085 194.264 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  39.3187 274.264 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  159.194 183.508 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -12.2466 155.376 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  184.881 182.03 0.452991 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  97.0614 103.033 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  192.682 306.797 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.729 209.932 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  70.1645 244.11 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  17.5576 308.919 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  99.3162 112.802 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.0514 246.076 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  95.7694 103.105 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  1.5994 116.823 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  187.482 141.449 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  147.093 100.891 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  176.902 111.474 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  186.641 296.574 0.488892 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  87.2004 310.961 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  127.359 202.329 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  49.4657 279.617 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  1.23032 100.926 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -10.569 303.573 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  1.08266 241.689 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  52.3842 183.667 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  150.488 245.085 0.471085 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  140.748 202.834 0.405664 
+WARNING: NAV: failed to set max speed 
+WARNING: NAV: Failed to set request to go to  -11.6183 188.028 0.405664 
+WARNING: NAV: failed to set max speed 
+[32m[GEN 0]  Episode recorded:  steps: 22,  reward: -21.499066966874263,  terminal: 1,  visited: 0.0%,  total steps: 1000,  episodes: 16,  fps: 15[0m
+[90m[GEN 0]  Collected data sample:  {'image': (1016, 128, 128, 3), 'action': (1016, 2), 'reward': (1016,), 'terminal': (1016,), 'reset': (1016,), 'policy_value': (1016,), 'policy_entropy': (1016,), 'action_prob': (1016,)}[0m
+[90m[GEN 0]  Saving episode data (0): file:///saivvy/pydreamer/mlruns/0/6e95acd6fade4fa9a0587c0cc0b3eab1/artifacts/episodes/0/ep000000_000015-0-r-902-1000.npz[0m
+[32m[GEN 0]  Generator done.[0m
+[TRAIN]  Starting agent generators...[0m
+[90m[TRAIN]  Reading files from ['file:///saivvy/pydreamer/mlruns/0/6e95acd6fade4fa9a0587c0cc0b3eab1/artifacts/episodes/0']...[0m
+[90m[TRAIN]  Found total files|steps: 1|1000, filtered: 1|1000[0m
+[32m[GEN 0]  Generator 0 started: env=CARLA-GYM, n_steps=999999000, split_fraction=0.1, metrics=agent, save_uri=file:///saivvy/pydreamer/mlruns/0/6e95acd6fade4fa9a0587c0cc0b3eab1/artifacts/episodes/0[0m
+[32m[GEN 0]  Found existing 1 files, 16 episodes, 1000 steps in ['file:///saivvy/pydreamer/mlruns/0/6e95acd6fade4fa9a0587c0cc0b3eab1/artifacts/episodes/0'][0m
+Model: 52318897 parameters
+  MultiEncoder   : 1551312 parameters
+  MultiDecoder   : 22977461 parameters
+  RSSMCore       : 25180920 parameters
+  ActorCritic    : 2609203 parameters
+  NoProbeHead    : 1 parameters
+Started data worker (0)
+[90m[TRAIN]  Preprocess batch (before):  {'terminal': (16, 16, 'bool'), 'reset': (16, 16, 'bool'), 'reward': (16, 16, 'float64'), 'policy_value': (16, 16, 'float64'), 'action_prob': (16, 16, 'float64'), 'action': (16, 16, 2, 'float64'), 'policy_entropy': (16, 16, 'float64'), 'image': (16, 16, 128, 128, 3, 'uint8')}[0m
+[90m[TRAIN]  Preprocess batch (after):  {'terminal': (16, 16, 'float32'), 'reset': (16, 16, 'bool'), 'reward': (16, 16, 'float32'), 'action': (16, 16, 2, 'float16'), 'image': (16, 16, 3, 128, 128, 'float16'), 'vecobs': (16, 16, 64, 'float16')}[0m
+[90m[TRAIN]  Saving batch d2_wm_closed (input):  {'terminal': (16, 16), 'reset': (16, 16), 'reward': (16, 16), 'action': (16, 16, 2), 'image': (16, 16, 3, 128, 128), 'vecobs': (16, 16, 64), 'loss_image': (16, 16), 'image_rec': (16, 16, 3, 128, 128), 'loss_reward': (16, 16), 'reward_rec': (16, 16), 'loss_terminal': (16, 16), 'terminal_rec': (16, 16), 'loss_kl': (16, 16), 'entropy_prior': (16, 16), 'entropy_post': (16, 16), 'policy_value': (16, 16)}[0m
+[90m[TRAIN]  Saving batch d2_wm_closed (proc.):  {'terminal': (16, 16), 'reset': (16, 16), 'reward': (16, 16), 'action': (16, 16, 2), 'image': (16, 16, 128, 128, 3), 'vecobs': (16, 16, 64), 'loss_image': (16, 16), 'image_rec': (16, 16, 128, 128, 3), 'loss_reward': (16, 16), 'reward_rec': (16, 16), 'loss_terminal': (16, 16), 'terminal_rec': (16, 16), 'loss_kl': (16, 16), 'entropy_prior': (16, 16), 'entropy_post': (16, 16), 'policy_value': (16, 16)}[0m
+[90m[TRAIN]  Uploading artifact d2_wm_closed/0000001.npz size 4.36 MB[0m
+[90m[TRAIN]  Saving batch d2_wm_dream (input):  {'terminal': (16, 16), 'reset': (16, 16), 'reward': (16, 16), 'action': (16, 16, 2), 'image': (16, 16, 3, 128, 128), 'vecobs': (16, 16, 64), 'action_pred': (16, 16, 2), 'reward_pred': (16, 16), 'terminal_pred': (16, 16), 'image_pred': (16, 16, 3, 128, 128), 'value': (16, 16), 'value_target': (15, 16), 'value_advantage': (15, 16), 'value_advantage_gae': (15, 16), 'value_weight': (15, 16)}[0m
+[90m[TRAIN]  Saving batch d2_wm_dream (proc.):  {'terminal': (16, 16), 'reset': (16, 16), 'reward': (16, 16), 'action': (16, 16, 2), 'image': (16, 16, 128, 128, 3), 'vecobs': (16, 16, 64), 'action_pred': (16, 16, 2), 'reward_pred': (16, 16), 'terminal_pred': (16, 16), 'image_pred': (16, 16, 128, 128, 3), 'value': (16, 16), 'value_target': (16, 15), 'value_advantage': (16, 15), 'value_advantage_gae': (16, 15), 'value_weight': (16, 15)}[0m
+Connecting to CARLA server...
+Connected!
+[90m[GEN 0]  Generator model checkpoint not found, waiting...[0m
+[90m[TRAIN]  Uploading artifact d2_wm_dream/0000001.npz size 4.42 MB[0m
+[90m[GEN 0]  Generator model checkpoint not found, waiting...[0m

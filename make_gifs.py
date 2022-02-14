@@ -50,7 +50,7 @@ def encode_gif(frames, fps):
     del proc
     return out
 
-def make_gif(path_name, run_id, step, fps=FPS, image_size=64):
+def make_gif(path_name, run_id, step, image_size, fps=FPS):
     dest_path = f'{path_name}_{step}.gif'
     artifact = f'd2_wm_dream/{step}.npz'
     data = download_artifact_npz(run_id, artifact)
@@ -113,7 +113,9 @@ def get_latest():
 # args: dream_name, dream number, run id
 def main(args):
     # get run id
-    if len(args) > 2:
+    if len(args) > 2 and str(args[2]) == 'latest':
+        run_id = get_latest()
+    elif len(args) > 2:
         if len(args) == 32:
             run_id = str(args[2])
         else:
@@ -139,7 +141,7 @@ def main(args):
         file_name = "results/atari/figures/dream"
 
     if len(args) > 3:
-        if type(args) != int:
+        if not args[3].isnumeric():
             exit("invalid image size")
         image_size = int(args[3])
     else:
