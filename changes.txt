@@ -22,6 +22,9 @@ fixed by changing obs from carla env:
 - only one category for each pixel
 - additional layer (13 total after adding) for background (previous pixel was categoryless)
 
+Changed BEV images to be RGB instead, this is done inside the bev sensor of the carla gym
+
+
 
 running with batch size/len == 1
 
@@ -37,7 +40,7 @@ Traceback (most recent call last):
 RuntimeError: stack expects a non-empty TensorList
 
 
-
+something to do with pedestrians in carla_gym
 WARNING: NAV: Failed to set request to go to  206.772 -207.745 0.22414 
 WARNING: NAV: failed to set max speed 
 WARNING: NAV: Failed to set request to go to  106.496 -282.289 0.22414 
