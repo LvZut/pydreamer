@@ -147,6 +147,7 @@ def main(env_id='MiniGrid-MazeS11N-v0',
             obs, reward, done, inf = env.step(action)
             steps += 1
             epsteps += 1
+
             for k, v in mets.items():
                 metrics[k].append(v)
 
@@ -253,6 +254,10 @@ def main(env_id='MiniGrid-MazeS11N-v0',
                     # Categorical image, leave it alone
                     pass
                 repo.save_data(data, episodes - datas_episodes, episodes - 1, i)
+
+
+    if env_id == 'CARLA-GYM':
+        env.close()
 
     info('Generator done.')
 

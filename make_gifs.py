@@ -113,10 +113,18 @@ def get_latest():
 # args: dream_name, dream number, run id
 def main(args):
     # get run id
+<<<<<<< HEAD
     if len(args) > 2 and str(args[2]) == 'latest':
         run_id = get_latest()
     elif len(args) > 2:
         if len(args) == 32:
+=======
+
+    if len(args) > 2:
+        if str(args[2]) == 'latest':
+            run_id = get_latest()
+        if len(args[2]) == 32:
+>>>>>>> f926bd1373466388397b3bf10d4456083afa2d1c
             run_id = str(args[2])
         else:
             exit("invalid run id")
@@ -169,10 +177,11 @@ def main(args):
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
-        print(f'usage: make_gif.py dream_name dream_number run_id\n\
+        print(f'usage: make_gif.py dream_name dream_number run_id image_size\n\
                 default:\n\
                 dream_name: results/atari/figures/dream_"step" (adding / to dream_name creates dir)\n\
                 dream_number: all dreams found in corresponding dreams dir\n\
-                run_id: last edited directory inside of mlruns/0')
+                run_id: last edited directory inside of mlruns/0, same as "latest"\n\
+                image_size: 64')
         exit(0)
     main(sys.argv[1:])
