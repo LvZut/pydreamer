@@ -1,5 +1,5 @@
 '''
-    Make dream gifs using command line arguments instead of jupyter notebook.
+    Make reconstructed/dream gifs using command line inputs instead of jupyter notebook.
     Runnable through ssh.
 '''
 
@@ -17,7 +17,7 @@ from mlflow.tracking import MlflowClient
 
 import mlflow
 
-# mlflow.get_tracking_uri()
+mlflow.get_tracking_uri()
 mlflow.set_tracking_uri('file:///saivvy/pydreamer/mlruns')
 
 FPS = 10
@@ -50,11 +50,15 @@ def encode_gif(frames, fps):
     del proc
     return out
 
-def make_gif(path_name, run_id, step, image_size, fps=FPS):
+def make_gif(path_name, run_id, step, image_size, im_type='dream', fps=FPS):
     dest_path = f'{path_name}_{step}.gif'
-    artifact = f'd2_wm_dream/{step}.npz'
+    artifact = f'd2_wm_{im_type}/{step}.npz'
     data = download_artifact_npz(run_id, artifact)
-    img = data['image_pred']
+    if im_type == 'dream':
+        img = data['image_pred']
+    else:
+        img = data['image_rec']
+    
     print(img.shape)
     img = img[:B, :T].reshape((-1, image_size, image_size, 3))[:,:,:,:3]
     gif = encode_gif(img, fps)
@@ -81,11 +85,11 @@ def make_gif_onehot(env_name, run_id, step, fps=FPS):
         f.write(gif)
 
 
-def process_dream_num(int_num):
-    # preprocess dream number to fit filename
+def process_im_num(int_num):
+    # preprocess im number to fit filename
     num = str(int_num)
-    if len(num) > 7 or len(num) < 1:
-        exit("Invalid dream number")
+    if len(num) > 8 or len(num) < 4:
+        exit("Invalid image number")
     
     if str(num)[-1] != 1:
         num = str(num)[:-1] + str(1)
@@ -107,81 +111,127 @@ def get_latest():
     all_subdirs = all_subdirs_of(b="mlruns/0")
     return max(all_subdirs, key=os.path.getmtime)[9:]
 
+def get_runs():
+    all_subdirs = all_subdirs_of(b="mlruns/0")
+    all_subdirs = [subdir[9:] for subdir in all_subdirs]
+    return all_subdirs
 
 
-
-# args: dream_name, dream number, run id
-def main(args):
-    # get run id
-<<<<<<< HEAD
-    if len(args) > 2 and str(args[2]) == 'latest':
-        run_id = get_latest()
-    elif len(args) > 2:
-        if len(args) == 32:
-=======
-
-    if len(args) > 2:
-        if str(args[2]) == 'latest':
-            run_id = get_latest()
-        if len(args[2]) == 32:
->>>>>>> f926bd1373466388397b3bf10d4456083afa2d1c
-            run_id = str(args[2])
+def main():
+    # run id
+    latest = get_latest()
+    all_subdirs = get_runs()
+    while True:
+        print(f'Make image for what run?\nEnter specific run_id or leave empty (Uses: {latest})')
+        run_choice = input('Run id:')
+        if run_choice == '':
+            run_id = latest
+            break
+        elif run_choice not in all_subdirs:
+            print('Unable to find run id in mlruns/0/\n')
         else:
-            exit("invalid run id")
-    else:
-        # get last modified run if no run id is given
-        run_id = get_latest()
+            run_id = run_choice
+            break
+    print(f"Using run_id: {run_id}\n")
 
-    
-    dirname = os.path.dirname(__file__)
-    if len(args) > 0:
-        file_name = f"results/atari/figures/{args[0]}"
+    # image type
+    while True:
+        print(f'Dream (0) or Closed (1)? (default dream (0))')
+        type_choice = input()
+        if type_choice == '1':
+            im_type = 'closed'
+            break
+        elif type_choice == '0' or type_choice == '':
+            im_type = 'dream'
+            break
+        else:
+            print('Invalid input\n')
+    print(f"Using {im_type} image type\n")
 
-        # create directory if '/' in dreamname is given
-        file_name = os.path.join(dirname, file_name)
 
-        if args[0].find('/') != -1:
-            dir_name = file_name[:-(args[0].find('/')+2)]
-            print(dir_name, file_name, '\n\n')
+    # image number
+    im_dir = f'mlruns/0/{str(run_id)}/artifacts/d2_wm_{im_type}/'
+    files = [im_dir + str(f) for f in listdir(im_dir)]
+    while True:
+        print(f'Image number\nCan be a single number, multiple numbers (1001, 2001, ...), "all" or leave empty (Uses last image of run)')
+        im_choice = input('Image number:')
+        if im_choice == "":
+            latest_im = max(files, key=os.path.getmtime)
+
+            # hard coded, get dream num from file path
+            im_num = [latest_im[-11:-4]]
+            print(f"Using latest: {im_num}\n")
+            break
+        elif im_choice == "all":
+            im_num = files
+            print("Using all images\n")
+            break
+        elif " " in im_choice:
+            im_nums = im_choice.split(" ")
+            im_num = []
+            error = False
+            for num in im_nums:
+                if f'mlruns/0/{run_id}/artifacts/d2_wm_{im_type}/{process_im_num(num)}.npz' not in files:
+                    error = True
+                    print(f"Image {num} not found\n")
+                else:
+                    im_num.append(process_im_num(num))
+
+            if not error:
+                print(f"Using images: {im_num}\n")
+                break
+        elif f'mlruns/0/{run_id}/artifacts/d2_wm_{im_type}/{process_im_num(im_choice)}.npz' in files:
+            im_num = [process_im_num(im_choice)]
+            print("Using Image: {im_num}\n")
+            break
+        else:
+            print(files)
+            print('Image not found\n')
+
+    # directory / file name
+    while True:
+        print("File name of image\n(e.g. dream_carla -> dream_carla_(image_number).gif)\nFiles are saved in the results/figures/ folder\nAdding '/' will create a new folder")
+        im_name = input("File name:")
+        if im_name.count('/') == 0:
+            file_name = f'results/figures/{im_name}'
+            break
+        elif im_name.count('/') == 1:
+            dir_name = 'results/figures/' + im_name[:im_name.find('/')+1]
             if not os.path.exists(dir_name):
+                print('creating directory:', dir_name)
                 os.mkdir(dir_name)
-    else:
-        file_name = "results/atari/figures/dream"
+            file_name = f'results/figures/{im_name}'
+            break
+        elif im_name == "":
+            file_name = f'results/figures/image'
+            break
+        else:
+            print("Invalid image name\n")
 
-    if len(args) > 3:
-        if not args[3].isnumeric():
-            exit("invalid image size")
-        image_size = int(args[3])
-    else:
-        image_size = 64
+    print(f"Saving image under file name: {file_name}\n")
 
-    if len(args) > 1:
-        dream_num = process_dream_num(args[1])
-    else:
-        dream_dir = f'mlruns/0/{str(run_id)}/artifacts/d2_wm_dream'
-        files = [f for f in listdir(dream_dir)]
 
-        for dream_file in files:
-            dream_num = dream_file[:7]
-            make_gif(file_name, run_id, dream_num, image_size)
-
-        exit('done')
+    # image size
+    image_size = input('image size (default 128):')
     
+    if image_size == "":
+        image_size = 128
+    elif image_size.isdigit():
+        image_size = int(image_size)
+    else:
+        print('Image size must be an Int\n')
+
+    print(f'Using image size: {image_size}\n')
 
 
-    make_gif(file_name, run_id, dream_num, image_size)
-
-
+    # make gifs
+    for num in im_num:
+        print(num)
+        num = process_im_num(num)
+        print(f'Saving under name: {file_name}\nFrom file: mlruns/0/{run_id}/artifacts/d2_wm_{im_type}/{im_num}.npz\nImage_size: {image_size}')
+        make_gif(file_name, run_id, num, image_size, im_type=im_type)
 
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 1:
-        print(f'usage: make_gif.py dream_name dream_number run_id image_size\n\
-                default:\n\
-                dream_name: results/atari/figures/dream_"step" (adding / to dream_name creates dir)\n\
-                dream_number: all dreams found in corresponding dreams dir\n\
-                run_id: last edited directory inside of mlruns/0, same as "latest"\n\
-                image_size: 64')
-        exit(0)
-    main(sys.argv[1:])
+    main()
