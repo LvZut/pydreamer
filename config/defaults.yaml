@@ -3,10 +3,10 @@ defaults:
   n_steps: 1_000_000
   n_env_steps: 1_000_000_000
   run_name:
-  resume_id:
+  resume_id: 74621780f43b47039357692110029ecd
   offline_data_dir:
-  offline_prefill_dir: '/saivvy/pydreamer/mlruns/0/bfa4b3d9bdba4fafa4d9a85c150c9b32/artifacts/episodes/0'
-  # offline_prefill_dir:
+  # offline_prefill_dir: '/saivvy/pydreamer/mlruns/0/bfa4b3d9bdba4fafa4d9a85c150c9b32/artifacts/episodes/0'
+  offline_prefill_dir:
   offline_test_dir:
   offline_eval_dir:
   log_interval: 100
@@ -117,14 +117,9 @@ carla:
   env_id: CARLA-GYM
   data_workers: 1  # workers that load saved data into dataloader
   generator_workers: 1 # also number of carla sessions (up to ~5gb GPU memory per worker)
-<<<<<<< HEAD
-  generator_prefill_steps: 40_000
-=======
   generator_prefill_steps: 50_000
->>>>>>> f926bd1373466388397b3bf10d4456083afa2d1c
-  generator_prefill_policy: AutoPilotPolicy # random with more chance to accelerate
-  # resume_id:
-
+  generator_prefill_policy: random # random with more chance to accelerate
+  #resume_id:
 
   eval_interval: 2000
 
@@ -213,7 +208,7 @@ carla:
   actor_grad: reinforce
 
  # decrease learning rate
-  # adam_lr: 3.0e-4
+ # adam_lr: 3.0e-4
   adam_lr: 3.0e-4
 
 atari:
